@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <label className="label" for="animal">
+          <label className="label" htmlFor="animal">
             Enter animal:
           </label>
           <input id="animal" type="text" />
