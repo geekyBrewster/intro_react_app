@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
+    const buttonText = "Click Me!";
+
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <label className="label" for="animal">
+            Enter animal:
+          </label>
+          <input id="animal" type="text" />
+          <button style={{backgroundColor: 'blue', color: 'white'}}>
+            {buttonText /*Use curly braces to reference JS code*/}
+          </button>
         </header>
       </div>
     );
