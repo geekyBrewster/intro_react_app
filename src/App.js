@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
+import Field from "./components/field";
 
 class App extends Component {
   state = { displayText: false };
@@ -7,7 +8,7 @@ class App extends Component {
     this.setState({ displayText: !this.state.displayText });
   }
 
-  /* Not "clea" way to set up state and a function - kept here for notes
+  /* Not "clear" way to set up state and a function - kept here for notes
   constructor (){
     super(); //calls constructor of parent class
     this.state = { displayText: false }; //add element to state object
@@ -25,6 +26,7 @@ class App extends Component {
 
   render() {
     const buttonText = "Click Me!";
+    const [text] = useState("Greetings!");
 
     let extraText = this.state.displayText ? (<div>
                       <p>Oh boy, here is some text.</p>
@@ -60,6 +62,9 @@ class App extends Component {
             {buttonText /*Use curly braces to reference JS code*/}
           </button>
         </div>
+        <div>
+        <Field label="Enter input:" value={text}/>
+      </div>
       </div>
     );
   }
