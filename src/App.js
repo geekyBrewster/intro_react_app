@@ -8,22 +8,6 @@ class App extends Component {
     this.setState({ displayText: !this.state.displayText });
   }
 
-  /* Not "clear" way to set up state and a function - kept here for notes
-  constructor (){
-    super(); //calls constructor of parent class
-    this.state = { displayText: false }; //add element to state object
-
-    this.toggleDisplayText = this.toggleDisplayText.bind(this);
-    //attach the 'this' of the component to the readMore function
-    //then attahce this new function to the readMore function
-  }
-
-  toggleDisplayText(){
-    this.setState({ displayText: !this.state.displayText }); //DO NOT DIRECTLY SET STATE - this.state.DisplayText = true; DON'T DO THIS!!
-    //Inside .setState({ // stateObject key values to edit go here // })
-  }
-  */
-
   render() {
     const buttonText = "Click Me!";
     const [text] = useState("Greetings!");
@@ -64,7 +48,7 @@ class App extends Component {
         </div>
         <div>
         <Field label="Enter input:" value={text}/>
-      </div>
+        </div>
       </div>
     );
   }
