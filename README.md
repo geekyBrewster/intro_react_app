@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 I'll be using this project to play around with React as I'm going through a Udemy course on React/Redux,
-so don't expect anything special or groundbreaking.
+so don't expect anything special or groundbreaking. Hopefully it'll see more activity now that I'm picking it back up after a couple of years off.
 
 ## Available Scripts
 
