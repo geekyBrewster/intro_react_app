@@ -71,6 +71,10 @@ const App = () => {
                         imgSource={imageSources.Bill}
                     />
                 </ApprovalCard>
+                <ApprovalCard>
+                    <h4>Warning!</h4>
+                   Are you sure you want to do that, Dave?
+                </ApprovalCard>
             </div>
         </div>
     );
