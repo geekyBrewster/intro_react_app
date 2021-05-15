@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import CommentDetail from './components/CommentDetail';
+import ApprovalCard from './components/ApprovalCard';
 
 //Simple react component
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
     const labelText = "Enter name: ";
     const buttonStyle = { backgroundColor: 'blue', color: 'white', margin: '10px 5px'};
     const timeStyle = { color: 'blue', fontSize: '24px', fontFamily: 'Serif', margin: '10px 5px'};
-    const imageSources = {Nick: "https://www.placecage.com/g/140/100", Bill: "https://www.fillmurray.com/140/100"};
+    const imageSources = {Nick: "https://www.placecage.com/140/100", Bill: "https://www.fillmurray.com/300/200"};
     const comments = [
         "I'm bored. Anhyone have plans for the weekend?",
         "Hey Nick, want to play golf this weekend?",
@@ -39,7 +40,7 @@ const App = () => {
                 <span style={ timeStyle }>{getTime()}</span>
             </div>
             <hr />
-            {/* Section below uses components and props */}
+            {/* Section below uses components and props to pass in param data */}
             <div className="ui container comments">
                <CommentDetail 
                     author="Nick"
@@ -58,6 +59,18 @@ const App = () => {
                     date="Friday at 13:35 pm" 
                     content={comments[0]}
                 />
+            </div>
+            <hr />
+            {/* Section belonw passes along child component to parent component via props.children */}
+            <div>
+                <ApprovalCard>
+                    <CommentDetail 
+                        author="Bill"
+                        date="Sunday at 1:20 pm" 
+                        content='That was a great round of golf.'
+                        imgSource={imageSources.Bill}
+                    />
+                </ApprovalCard>
             </div>
         </div>
     );
