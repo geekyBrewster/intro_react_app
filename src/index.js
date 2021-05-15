@@ -8,7 +8,8 @@ import CommentDetail from './components/CommentDetail';
 const App = () => {
     const buttonText = { text: "Click Me!" };
     const labelText = "Enter name: ";
-    const buttonStyle = { backgroundColor: 'blue', color: 'white'};
+    const buttonStyle = { backgroundColor: 'blue', color: 'white', margin: '10px 5px'};
+    const timeStyle = { color: 'blue', fontSize: '24px', fontFamily: 'Serif', margin: '10px 5px'};
     const imageSources = {Nick: "https://www.placecage.com/g/140/100", Bill: "https://www.fillmurray.com/140/100"};
     const comments = [
         "I'm bored. Anhyone have plans for the weekend?",
@@ -34,8 +35,8 @@ const App = () => {
             </div>
             <hr/>
             <div>
-                <div>Current time:</div>
-                <h3>{getTime()}</h3>
+                <span>Current time:</span>
+                <span style={ timeStyle }>{getTime()}</span>
             </div>
             <hr />
             {/* Section below uses components and props */}
